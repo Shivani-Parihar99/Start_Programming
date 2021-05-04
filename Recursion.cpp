@@ -66,7 +66,7 @@ using namespace std;
 int count_digits(int number) {
 
   // Base Case
-  if (abs(number)/10 == 0) {
+  if ((number)/10 == 0) {
     return 1;
   }
   // Recursive Case  
