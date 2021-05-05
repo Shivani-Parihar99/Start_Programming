@@ -21,3 +21,4 @@ int main() {
   // Displays modified image
   saveFile("output/modified.png");
 }
+//
