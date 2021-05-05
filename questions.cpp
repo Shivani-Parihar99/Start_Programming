@@ -26,9 +26,6 @@ int main() {
   int number = 7;
   bool isPrime = true;
   // if block
-  /*Checks if the value of a `number` is less than or equal to 
-  1. If yes, then execute line No. 13 to 16. If no, then execute 
-  line No. 18*/
   if (number <= 1) {
   //Sets the value of `isPrime` to false
     isPrime = false;
@@ -55,10 +52,6 @@ int main() {
   // Prints value of decimal
   cout << "Decimal Number = " << decimal << endl;
   // while block
-  /*Checks if the value of `decimal` is not equal to `0`. 
-  If yes, then execute line No. 17 to 21.
-  If no, then execute line No. 23.
-  */
   while (decimal != 0) {
     remainder = decimal % 2;
     binary = binary + (remainder * product);
