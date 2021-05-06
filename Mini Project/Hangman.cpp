@@ -111,5 +111,46 @@ void displayWord(string word, int length) {
     }
     cout << endl;
 }
+int isGuessTrue(string secretWord, char guessWord[], char letter) {
+    int flag = 0;
+    for (int i = 0; i < secretWord.length(); i++) {
+        if (secretWord[i] == letter) {
+            if (guessWord[i] == secretWord[i]) {
+                flag = 2;
+            } else {
+                guessWord[i] = secretWord[i];
+                flag = 1;
+            }
+        }
+    }
+    return flag;
+}
+
+void displayMan(int remainingGuess) {
+
+    string part[4];
+    switch (remainingGuess) {
+    case 0:
+        part[3] = "|";
+    case 1:
+        part[2] = "/|\\";
+    case 2:
+        part[1] = "/|\\";
+    case 3:
+        part[0] = "( )";
+        break;
+    }
+
+    cout << "--------------\n";
+    cout << "  |       " << part[3] << endl;
+    cout << "  |       " << part[3] << endl;
+    cout << "  |      " << part[0] << endl;
+    cout << "  |      " << part[1] << endl;
+    cout << "  |      " << part[2] << endl;
+    cout << "  |\n";
+    cout << "  |\n";
+    cout << "--------------\n";
+}
+
 
 
