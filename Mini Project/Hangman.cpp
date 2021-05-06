@@ -66,4 +66,50 @@ int main() {
     displayWord(secretWord, secretWordLength);
     }
 }
+void displayGameDetails(int maxTries){
+    cout << "\n"
+    "        .-------------------------------------------------------------------------------.\n"
+    "        |      _      _                                                                  |\n"
+    "        |     | |    | |   __ _    _ __      __ _        /\\/\\      __ _    _ __          |\n"
+    "        |     | |----| |  / _  |  |  _ \\    / _` |      /    \\    / _  |  |  _  \\        |\n"
+    "        |     | |----| | | (_| |  | | | |  | (_| |     / /\\/\\ |  | (_| |  | | | |        |\n"
+    "        |     |_|    |_|  \\_ _ |  |_| |_|   \\__, |     \\/    \\/   \\_ _ |  |_| |_|        |\n"
+    "        |                                    |___/                                       |\n"
+    "        .--------------------------------------------------------------------------------.\n";
+
+    cout << "The purpose of this game is to guess an animal name, secretly chosen by the application\n\n";
+    cout << "You have to guess one letter at a time and you can have " << maxTries << " wrong attempts\n\n";
+    cout << "Enter a lower-case letter and don't forget to enter key after each guess\n\n";
+    cout << "Let's play the game!\n\n";
+}
+
+string chooseSecretWord() {
+    srand(time(NULL));
+
+    string animals[] = {"puppy","turtle","rabbit","raccoon","kitten","hamster",
+        "sheep","turkey","chicken","horse","chimpanzee","kangaroo","koala",
+        "elephant","leopard","hippopotamus","giraffe","crocodile","alligator",
+        "hedgehog"
+    };
+
+    int randomIndex = (rand() % 20);
+    string word = animals[randomIndex];
+    return word;
+}
+
+void replaceDashes(char guessWord[], int length) {
+    // your code goes here
+    for (int i = 0 ; i < length ; i++)
+        guessWord[i] = '-';
+    guessWord[length] = '\0';
+}
+
+void displayWord(string word, int length) {
+    for (int i = 0; i < length; i++) {
+
+        cout << word[i];
+    }
+    cout << endl;
+}
+
 
