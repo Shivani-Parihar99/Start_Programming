@@ -35,7 +35,6 @@ int main() {
     // if block
     if (number % counter == 0) {
       isPrime = false;
-      // jump to line No. 27
       break;
     }
   }
