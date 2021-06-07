@@ -141,7 +141,6 @@ int Fibonacci(int n) {
 
 }
 
-// main function
 int main() {
   // Initialize variable n
   int n = 4;
